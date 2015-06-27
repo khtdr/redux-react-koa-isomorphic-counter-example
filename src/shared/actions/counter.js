@@ -22,9 +22,8 @@ export function loadCounter() {
   };
 }
 
-export function incrementIfOdd() {
-  return (dispatch, getState) => {
-    if (getState().counter % 2 === 0) { return; }
-    else dispatch(increment());
-  };
+export function incrementIfOdd(counter) {
+  if (counter % 2 === 1) {
+    return increment();
+  }
 }
