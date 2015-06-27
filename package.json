@@ -4,7 +4,7 @@
   "description": "Counter example for redux",
   "main": "lib/server",
   "scripts": {
-    "prestart": "make",
+    "prestart": "make -j5",
     "start": "node --harmony lib/server"
   },
   "repository": {
