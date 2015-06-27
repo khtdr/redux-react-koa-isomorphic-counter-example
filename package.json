@@ -4,8 +4,9 @@
   "description": "Counter example for redux",
   "main": "lib/server",
   "scripts": {
-    "prestart": "make -j5",
-    "start": "node --harmony lib/server"
+    "prestart": "make clean && make -j5 build",
+    "start": "node --harmony lib/server",
+    "dev": "NODE_ENV=development make -j5 webpack-server dev-server watch"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   },
   "homepage": "https://github.com/gaearon/redux#readme",
   "dependencies": {
+    "babel-runtime": "^5.6.15",
     "isomorphic-fetch": "^2.1.0",
     "koa": "^0.21.0",
     "koa-bodyparser": "^2.0.0",
@@ -42,7 +44,7 @@
   "devDependencies": {
     "babel": "^5.6.14",
     "babel-core": "^5.5.8",
-    "babel-loader": "^5.1.4",
+    "babel-loader": "^5.2.2",
     "node-libs-browser": "^0.5.2",
     "nodemon": "^1.3.7",
     "react-hot-loader": "^1.2.7",
