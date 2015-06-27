@@ -1,14 +1,13 @@
 
 
+What is this?
+=============
 
+Bundled with [Redux](https://github.com/gaearon/redux) is an example
+application called
+[counter](https://github.com/gaearon/redux/tree/master/examples/counter).
 
-Prereqs
-=======
-
-  - GNU Make
-    - _linux_ -- you have it already
-    - _mac_ -- https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/gnumake.1.html
-    - _windows_ -- dunno
+This is an isomorphic port of the counter app using [Koa](http://koajs.com/).  It uses [isomorphic-fectch](https://github.com/matthew-andrews/isomorphic-fetch) to load the initial state on the server, and update the state from the client. Data is `POST`-ed and `GET`'ed from an API within the Koa application.
 
 
 Installing
@@ -32,4 +31,6 @@ Using
 =====
 
   - Open `http://localhost:3000`
+  - Press the buttons a few times
+  - Reload page and inspect source to see the value in the HTML source
 
