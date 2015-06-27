@@ -35,7 +35,7 @@ Using
   - Reload page and inspect source to see the value in the HTML source
 
 
-Thanks
+Credits
 ======
 
 Based off the following ideas, code, examples:
