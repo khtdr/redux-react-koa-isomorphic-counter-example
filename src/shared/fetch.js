@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch';
+import 'isomorphic-fetch';
 import methods from 'methods';
 
 methods.forEach(function(method){
