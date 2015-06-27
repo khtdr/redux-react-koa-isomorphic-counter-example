@@ -14,11 +14,13 @@ export default class Counter {
       <p>
         Clicked: {counter} times
         {' '}
-        <button onClick={increment}>+</button>
+        <button onClick={()=>increment()}>+</button>
         {' '}
-        <button onClick={decrement}>-</button>
+        <button onClick={()=>decrement()}>-</button>
         {' '}
-        <button onClick={incrementIfOdd}>Increment if odd</button>
+        <button onClick={()=>incrementIfOdd(counter)}>
+          Increment if odd
+        </button>
       </p>
     );
   }
