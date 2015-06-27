@@ -34,3 +34,13 @@ Using
   - Press the buttons a few times
   - Reload page and inspect source to see the value in the HTML source
 
+
+Thanks
+======
+
+Based off the following ideas, code, examples:
+  - [Redux](https://github.com/gaearon/redux)
+  - [Redux - Counter Example](https://github.com/gaearon/redux/tree/master/examples/counter)
+  - [Flummox Docs App](https://github.com/acdlite/flummox/tree/master/docs)
+  - [isomorphic500](https://github.com/gpbl/isomorphic500/)
+  - [redux-universal-example](https://github.com/erikras/react-redux-universal-hot-example/)
