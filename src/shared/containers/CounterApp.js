@@ -2,7 +2,7 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'redux/react';
 import Counter from '../components/Counter';
-import * as CounterActions from '../actions/CounterActions';
+import * as CounterActions from '../actions/counter';
 
 @connect(state => ({
   counter: state.counter

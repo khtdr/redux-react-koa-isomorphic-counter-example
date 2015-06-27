@@ -10,6 +10,7 @@
   <body>
     <div id="App">{{ appString | safe }}</div>
 
+    <script>window.__initialState = {{ initialState | safe }}</script>
     {% if env.NODE_ENV == 'development' %}
       <script src="http://localhost:3001/js/app.js" defer></script>
     {% else %}
