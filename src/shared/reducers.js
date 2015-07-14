@@ -1,4 +1,4 @@
-import { UPDATE_COUNTER } from './constants/ActionTypes';
+import { UPDATE_COUNTER } from './constants';
 
 export default {
   counter: function (init=0, {type, count}) {

@@ -2,18 +2,18 @@ window.__CLIENT__ = true;
 window.__SERVER__ = false;
 
 import 'babel/polyfill';
-
 import React from 'react';
 import { Provider } from 'react-redux';
-import CounterApp from '../shared/containers/CounterApp';
-import create from '../shared/redux';
-import * as stores from '../shared/stores';
+
+import create from '../shared/store';
+import * as reducers from '../shared/reducers';
+import CounterApp from '../shared/apps';
 
 const state = window.__initialState;
-const redux = create(stores, state);
+const store = create(reducers, state);
 
 React.render(
-  <Provider redux={redux}>
+  <Provider store={store}>
     {()=><CounterApp />}
   </Provider>,
   document.getElementById('App')

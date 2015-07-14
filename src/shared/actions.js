@@ -1,5 +1,5 @@
-import { get, post } from '../fetch';
-import { UPDATE_COUNTER } from '../constants/ActionTypes';
+import { get, post } from './fetch';
+import { UPDATE_COUNTER } from './constants';
 
 export function increment() {
   return {
@@ -26,4 +26,5 @@ export function incrementIfOdd(counter) {
   if (counter % 2 === 1) {
     return increment();
   }
+  return {};
 }

@@ -1,23 +1,21 @@
-import { createRedux, createDispatcher, composeReducers } from 'redux';
-//import middleware from 'redux-promise';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 export default function create(reducers, initialState) {
-  const store = composeReducers(reducers);
-  //const dispatcher = createDispatcher(store, () => [middleware]);
-  return createRedux(dispatcher, initialState);
+  const reducer = combineReducers(reducers);
+  const create = applyMiddleware(thunk)(createStore);
+  return create(reducer, initialState);
 }
 
-// promise middleware
-/*
-function my_middleware() {
-  return (next) => (action) => {
-    if (!action) return;
-    const { promise, ...rest } = action;
-    if (!promise) { return next({ ...rest }); }
-    return promise.then(
-      res => next({...rest, count:res}),
-      err => console.log(err)
-    );
-  };
+function thunk ({ dispatch, getState }) {
+  return next => ({ promise, ...rest }) => {
+    if (!promise) {
+      return next({ ...rest });
+    } else {
+      return promise.then(
+        res => next({ ...rest, count:res }),
+        err => console.log(err)
+      );
+    }
+  }
 }
-*/
+

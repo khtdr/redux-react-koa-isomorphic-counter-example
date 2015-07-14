@@ -1,21 +1,22 @@
 import React from 'react';
 import nunjucks from 'nunjucks';
-import CounterApp from '../shared/containers/CounterApp';
-import create from '../shared/redux';
 import { Provider } from 'react-redux';
-import { loadCounter } from '../shared/actions/counter';
-import * as stores from '../shared/stores';
+
+import create from '../shared/store';
+import * as reducers from '../shared/reducers';
+import { loadCounter } from '../shared/actions';
+import CounterApp from '../shared/apps';
 
 nunjucks.configure('views', { autoescape: true });
 
 export default function counter() {
   return function* () {
-    const redux = create(stores);
-    yield redux.dispatch(loadCounter());
-    var state = redux.getState();
+    const store = create(reducers);
+    yield store.dispatch(loadCounter());
+    var state = store.getState();
 
     const appString = React.renderToString(
-      <Provider redux={redux}>
+      <Provider store={store}>
         {()=><CounterApp {...state} />}
       </Provider>
     );

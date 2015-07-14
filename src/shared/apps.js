@@ -1,8 +1,8 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Counter from '../components/Counter';
-import * as actions from '../actions/counter';
+import Counter from './components';
+import * as actions from './actions';
 
 @connect(state => ({
   counter: state.counter
