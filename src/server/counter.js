@@ -2,7 +2,7 @@ import React from 'react';
 import nunjucks from 'nunjucks';
 import CounterApp from '../shared/containers/CounterApp';
 import create from '../shared/redux';
-import { Provider } from 'redux/react';
+import { Provider } from 'react-redux';
 import { loadCounter } from '../shared/actions/counter';
 import * as stores from '../shared/stores';
 

@@ -4,7 +4,7 @@ window.__SERVER__ = false;
 import 'babel/polyfill';
 
 import React from 'react';
-import { Provider } from 'redux/react';
+import { Provider } from 'react-redux';
 import CounterApp from '../shared/containers/CounterApp';
 import create from '../shared/redux';
 import * as stores from '../shared/stores';
