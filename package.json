@@ -1,6 +1,6 @@
 {
   "name": "redux-react-koa-isomorphic-counter-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Isomorphic port of the redux counter app",
   "main": "lib/server",
   "scripts": {

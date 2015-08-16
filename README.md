@@ -3,9 +3,11 @@
 What is this?
 =============
 
-Bundled with [Redux](https://github.com/gaearon/redux) is an example
+Versioning follows the version redux.
+
+Bundled with [Redux](https://github.com/rackt/redux) is an example
 application called
-[counter](https://github.com/gaearon/redux/tree/master/examples/counter).
+[counter](https://github.com/rackt/redux/tree/master/examples/counter).
 
 This is an isomorphic port of the counter app using [Koa](http://koajs.com/).  It uses [isomorphic-fectch](https://github.com/matthew-andrews/isomorphic-fetch) to load the initial state on the server, and update the state from the client. Data retrieved and set via `POST`s and `GET`s to and from the API  (`src/server/api.js`).
 
@@ -39,8 +41,8 @@ Credits
 ======
 
 Based off the following ideas, code, examples:
-  - [Redux](https://github.com/gaearon/redux)
-  - [Redux - Counter Example](https://github.com/gaearon/redux/tree/master/examples/counter)
+  - [Redux](https://github.com/rackt/redux)
+  - [Redux - Counter Example](https://github.com/rackt/redux/tree/master/examples/counter)
   - [Flummox Docs App](https://github.com/acdlite/flummox/tree/master/docs)
   - [isomorphic500](https://github.com/gpbl/isomorphic500/)
   - [redux-universal-example](https://github.com/erikras/react-redux-universal-hot-example/)
