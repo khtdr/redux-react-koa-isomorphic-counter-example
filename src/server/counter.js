@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOMServer from 'react-dom/server';
 import nunjucks from 'nunjucks';
 import { Provider } from 'react-redux';
 
@@ -15,9 +16,9 @@ export default function counter() {
     yield store.dispatch(loadCounter());
     var state = store.getState();
 
-    const appString = React.renderToString(
+    const appString = ReactDOMServer.renderToString(
       <Provider store={store}>
-        {()=><CounterApp {...state} />}
+        <CounterApp {...state} />
       </Provider>
     );
 
