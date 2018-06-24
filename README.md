@@ -4,6 +4,11 @@
   - Updated to the latest __React 16__ and __Redux 4__ - _June 23 2018_
   - Added Cypress.io tests with Travis CI - _June 23 2018_
 
+#### todo
+  - Document directory structures and build process
+  - Upgrade **Koa**
+  - Upgrade Webpack _only if needed_
+
 
 What is this?
 =============
