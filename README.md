@@ -28,6 +28,7 @@ Running
   - _prod_: `npm start`
   - _dev_: `npm run dev`
 
+If you have errors, make sure you are using an LTS node version and try again.
 
 Using
 =====
