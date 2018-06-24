@@ -1,13 +1,13 @@
+#### updates
+  - Updated to the latest React and Redux - _June 23 2018_
 
 
 What is this?
 =============
 
-Versioning follows the version redux.
-
-Bundled with [Redux](https://github.com/rackt/redux) is an example
+Bundled with [Redux](https://redux.js.org/) is an example
 application called
-[counter](https://github.com/rackt/redux/tree/master/examples/counter).
+[counter](https://github.com/reduxjs/redux/tree/master/examples/counter).
 
 This is an isomorphic port of the counter app using [Koa](http://koajs.com/).  It uses [isomorphic-fectch](https://github.com/matthew-andrews/isomorphic-fetch) to load the initial state on the server, and update the state from the client. Data retrieved and set via `POST`s and `GET`s to and from the API  (`src/server/api.js`).
 

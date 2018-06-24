@@ -1,16 +1,14 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { hot } from 'react-hot-loader';
 import Counter from './components';
 import * as actions from './actions';
 
-@connect(state => ({
+export default hot(module)(connect(state => ({
   counter: state.counter
-}))
-export default class CounterApp {
-  render() {
-    const { counter, dispatch } = this.props;
-    const creators = bindActionCreators(actions, dispatch);
-    return <Counter {...this.props} {...creators} />;
-  }
-}
+}))(props => {
+  const { counter, dispatch } = props;
+  const creators = bindActionCreators(actions, dispatch);
+  return <Counter {...props} {...creators} />;
+}));
