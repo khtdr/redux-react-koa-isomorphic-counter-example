@@ -26,5 +26,12 @@ export function incrementIfOdd(counter) {
   if (counter % 2 === 1) {
     return increment();
   }
-  return {};
+  return { type: 'NOOP' };
+}
+
+export function reset() {
+  return {
+    type: UPDATE_COUNTER,
+    promise: post('/api/count/reset')
+  };
 }

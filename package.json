@@ -4,9 +4,12 @@
   "description": "Isomorphic port of the redux counter app",
   "main": "lib/server",
   "scripts": {
+    "cypress:install": "cypress install",
+    "cypress:run": "cypress run --browser chrome",
+    "cypress:open": "cypress open",
     "prebuild": "make clean",
     "build": "NODE_ENV=production make -j5 build",
-    "prestart": "npm run build",
+    "prestart": "yarn run build",
     "start": "NODE_ENV=production node --harmony lib/server",
     "dev": "NODE_ENV=development make -j5 webpack-server dev-server watch"
   },
@@ -35,6 +38,7 @@
   "homepage": "https://github.com/khtdr/redux-react-koa-isomorphic-counter-example",
   "dependencies": {
     "babel-runtime": "^5.6.15",
+    "cypress": "^3.0.1",
     "isomorphic-fetch": "^2.1.0",
     "koa": "^0.21.0",
     "koa-bodyparser": "^2.0.0",
