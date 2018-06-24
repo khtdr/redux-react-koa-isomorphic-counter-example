@@ -6,22 +6,24 @@ export default class Counter extends React.Component {
     increment: PropTypes.func.isRequired,
     incrementIfOdd: PropTypes.func.isRequired,
     decrement: PropTypes.func.isRequired,
+    reset: PropTypes.func.isRequired,
     counter: PropTypes.number.isRequired
   };
 
   render() {
-    const { increment, incrementIfOdd, decrement, counter } = this.props;
     return (
       <p>
-        Clicked: {counter} times
+        Clicked: <span>{this.props.counter}</span> times
         {' '}
-        <button onClick={()=>increment()}>+</button>
+        <button onClick={()=>this.props.increment()}>+</button>
         {' '}
-        <button onClick={()=>decrement()}>-</button>
+        <button onClick={()=>this.props.decrement()}>-</button>
         {' '}
-        <button onClick={()=>incrementIfOdd(counter)}>
+        <button onClick={()=>this.props.incrementIfOdd(this.props.counter)}>
           Increment if odd
         </button>
+        {' '}
+        <button onClick={()=>this.props.reset()}>Reset</button>
       </p>
     );
   }

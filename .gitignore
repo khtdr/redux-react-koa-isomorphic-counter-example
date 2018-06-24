@@ -2,3 +2,8 @@ lib
 node_modules
 public
 *.log
+cypress/fixtures
+cypress/plugins
+cypress/support
+cypress/screenshots
+cypress/video

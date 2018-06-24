@@ -16,6 +16,10 @@ const app = koa()
   .use(route.post('/api/count/dec', function* () {
     this.body = --server_count;
   }))
+  .use(route.post('/api/count/reset', function* () {
+    server_count = 0;
+    this.body = server_count;
+  }))
 ;
 
 export default function () {

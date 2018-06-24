@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/khtdr/redux-react-koa-isomorphic-counter-example.svg?branch=master)](https://travis-ci.org/khtdr/redux-react-koa-isomorphic-counter-example)
+
 #### updates
   - Updated to the latest React and Redux - _June 23 2018_
 
