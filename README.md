@@ -2,6 +2,7 @@
 
 #### updates
   - Updated to the latest React and Redux - _June 23 2018_
+  - Added Cypress.io tests with Travis CI - _June 23 2018_
 
 
 What is this?
