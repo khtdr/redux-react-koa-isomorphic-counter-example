@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/khtdr/redux-react-koa-isomorphic-counter-example.svg?branch=master)](https://travis-ci.org/khtdr/redux-react-koa-isomorphic-counter-example)
 
 #### updates
-  - Updated to the latest React and Redux - _June 23 2018_
+  - Updated to the latest __React 16__ and __Redux 4__ - _June 23 2018_
   - Added Cypress.io tests with Travis CI - _June 23 2018_
 
 
@@ -21,17 +21,18 @@ Installing
 ```bash
 git clone git@github.com:khtdr/redux-react-koa-isomorphic-counter-example.git
 cd redux-react-koa-isomorphic-counter-example.git
-npm install
+yarn install
 ```
-
 
 Running
 =======
 
-  - _prod_: `npm start`
-  - _dev_: `npm run dev`
+To run a compiled production version:
+```bash
+yarn start
+```
 
-If you have errors, make sure you are using an LTS node version and try again.
+_If you have errors, make sure you are using an __LTS node version__ and try again._
 
 Using
 =====
@@ -40,13 +41,17 @@ Using
   - Press the buttons a few times
   - Reload page and inspect source to see the value in the HTML source
 
+Development
+===========
 
-Credits
-======
+To run a development version with hot reloading:
+```bash
+yarn run dev
+```
 
-Based off the following ideas, code, examples:
-  - [Redux](https://github.com/rackt/redux)
-  - [Redux - Counter Example](https://github.com/rackt/redux/tree/master/examples/counter)
-  - [Flummox Docs App](https://github.com/acdlite/flummox/tree/master/docs)
-  - [isomorphic500](https://github.com/gpbl/isomorphic500/)
-  - [redux-universal-example](https://github.com/erikras/react-redux-universal-hot-example/)
+To run dev + Cypress tests:
+```bash
+yarn start &
+yarn run cypress:open
+```
+
