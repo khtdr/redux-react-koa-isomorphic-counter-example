@@ -17,4 +17,4 @@ import counter from './counter';
 app.use(counter());
 
 app.listen(3000);
-console.log('ready');
+console.log('http://localhost:3000');
