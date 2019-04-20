@@ -1,10 +1,10 @@
 global.__CLIENT__ = false;
 global.__SERVER__ = true;
 
-import 'babel/polyfill';
-import koa from 'koa';
+import '@babel/polyfill';
+import Koa from 'koa';
 
-const app = koa();
+const app = new Koa();
 export default app;
 
 import serve from 'koa-static';

@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "redux-react-koa-isomorphic-counter-example",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Isomorphic port of the redux counter app",
   "main": "lib/server",
   "scripts": {
@@ -39,29 +39,32 @@
   },
   "homepage": "https://github.com/khtdr/redux-react-koa-isomorphic-counter-example",
   "dependencies": {
-    "babel-core": "^6.26.3",
-    "core-js": "^3.0.1",
-    "cypress": "^3.0.1",
+    "@babel/polyfill": "^7.4.3",
     "isomorphic-fetch": "^2.1.0",
-    "koa": "^0.21.0",
-    "koa-bodyparser": "^2.0.0",
-    "koa-compose": "^2.3.0",
-    "koa-route": "^2.4.1",
-    "koa-static": "^1.4.9",
-    "methods": "^1.1.1",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-compose": "^4.1.0",
+    "koa-route": "^3.2.0",
+    "koa-static": "^5.0.0",
     "nunjucks": "^3.1.3",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react-dom": "npm:@hot-loader/react-dom",
+    "react-hot-loader": "^4.8.4",
     "react-redux": "^7.0.2",
     "redux": "^4.0.0"
   },
   "devDependencies": {
-    "babel": "^5.6.14",
-    "babel-loader": "^5.2.2",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "cypress": "^3.0.1",
     "nodemon": "^1.17.5",
-    "react-hot-loader": "^4.3.3",
-    "webpack": "^1.9.11",
-    "webpack-dev-server": "^1.9.0"
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
   }
 }

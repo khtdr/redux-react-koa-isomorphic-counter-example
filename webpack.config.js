@@ -4,7 +4,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'source-map',
+  mode: 'production',
   entry: './src/client/app',
   output: {
     path: path.join(__dirname, '/public/js'),
@@ -14,18 +14,15 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: { warnings: false }
     })
   ],
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['.js']
   },
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loaders: ['babel?stage=0&experimental&optional[]=runtime'],
+    rules: [{
+      test: /\.jsx?$/,
+      loaders: ['babel-loader?plugins[]=@babel/proposal-class-properties&presets[]=@babel/react&presets[]=@babel/env'],
       exclude: /node_modules/
     }]
   }

@@ -1,9 +1,11 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 export default function create(reducers, initialState) {
-  const reducer = combineReducers(reducers);
-  const create = applyMiddleware(thunk)(createStore);
-  return create(reducer, initialState);
+  return createStore(
+    combineReducers(reducers),
+    initialState,
+    applyMiddleware(thunk)
+  );
 }
 
 function thunk ({ dispatch, getState }) {
@@ -18,4 +20,3 @@ function thunk ({ dispatch, getState }) {
     }
   }
 }
-

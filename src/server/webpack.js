@@ -1,6 +1,6 @@
 'use strict';
 
-import 'babel/polyfill';
+//import 'babel/polyfill';
 
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';

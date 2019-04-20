@@ -12,19 +12,23 @@ export default class Counter extends React.Component {
 
   render() {
     return (
-      <p>
-        Clicked: <span>{this.props.counter}</span> times
-        {' '}
-        <button onClick={()=>this.props.increment()}>+</button>
-        {' '}
-        <button onClick={()=>this.props.decrement()}>-</button>
-        {' '}
-        <button onClick={()=>this.props.incrementIfOdd(this.props.counter)}>
-          Increment if odd
-        </button>
-        {' '}
-        <button onClick={()=>this.props.reset()}>Reset</button>
-      </p>
+      <>
+        <p>
+          Current Value: <code>{this.props.counter}</code>
+        </p>
+        <fieldset>
+          <legend>actions</legend>
+          <button onClick={()=>this.props.increment()}>+</button>
+          {' '}
+          <button onClick={()=>this.props.decrement()}>-</button>
+          {' '}
+          <button onClick={()=>this.props.incrementIfOdd(this.props.counter)}>
+            Increment if odd
+          </button>
+          {' '}
+          <button onClick={()=>this.props.reset()}>Reset</button>
+        </fieldset>
+      </>
     );
   }
 }

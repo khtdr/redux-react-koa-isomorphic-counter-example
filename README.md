@@ -1,14 +1,15 @@
+[![Greenkeeper badge](https://badges.greenkeeper.io/khtdr/redux-react-koa-isomorphic-counter-example.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/khtdr/redux-react-koa-isomorphic-counter-example.svg?branch=master)](https://travis-ci.org/khtdr/redux-react-koa-isomorphic-counter-example)
+[![Dependency Status](https://david-dm.org/khtdr/redux-react-koa-isomorphic-counter-example/master.svg)](https://david-dm.org/khtdr/redux-react-koa-isomorphic-counter-example/master)
+[![devDependency Status](https://david-dm.org/khtdr/redux-react-koa-isomorphic-counter-example/master/dev-status.svg)](https://david-dm.org/khtdr/redux-react-koa-isomorphic-counter-example/master#type=dev)
 
 #### updates
+  - Upgraded _everything_ to the latest versions. - _April 20 2019_
   - Updated to the latest __React 16__ and __Redux 4__ - _June 23 2018_
   - Added Cypress.io tests with Travis CI - _June 23 2018_
 
 #### todo
   - Document directory structures and build process
-  - Upgrade **Koa**
-  - Upgrade Webpack _only if needed_
-
 
 What is this?
 =============

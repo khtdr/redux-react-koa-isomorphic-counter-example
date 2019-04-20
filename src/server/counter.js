@@ -4,16 +4,17 @@ import nunjucks from 'nunjucks';
 import { Provider } from 'react-redux';
 
 import create from '../shared/store';
-import * as reducers from '../shared/reducers';
+import reducers from '../shared/reducers';
 import { loadCounter } from '../shared/actions';
 import CounterApp from '../shared/apps';
 
 nunjucks.configure('views', { autoescape: true });
 
 export default function counter() {
-  return function* () {
+  return async function (ctx, next) {
+    if (ctx.url != '/') return next()
     const store = create(reducers);
-    yield store.dispatch(loadCounter());
+    await store.dispatch(loadCounter());
     var state = store.getState();
 
     const appString = ReactDOMServer.renderToString(
@@ -22,7 +23,7 @@ export default function counter() {
       </Provider>
     );
 
-    this.body = nunjucks.render('index.html', {
+    ctx.body = nunjucks.render('index.html', {
       appString,
       initialState:JSON.stringify(state),
       env:process.env

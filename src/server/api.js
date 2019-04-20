@@ -1,24 +1,28 @@
-import koa from 'koa';
+import Koa from 'koa';
 import bodyparser from 'koa-bodyparser';
 import route from 'koa-route';
 import compose from 'koa-compose';
 
 let server_count = 0;
 
-const app = koa()
+const app = new Koa()
+app
   .use(bodyparser())
-  .use(route.get('/api/count', function* () {
-    this.body = server_count;
+  .use(route.get('/api/count', ctx => {
+    ctx.body = server_count;
   }))
-  .use(route.post('/api/count/inc', function* () {
-    this.body = ++server_count;
+  .use(route.post('/api/count/inc', ctx => {
+    ctx.body = ++server_count;
   }))
-  .use(route.post('/api/count/dec', function* () {
-    this.body = --server_count;
+  .use(route.post('/api/count/dec', ctx => {
+    ctx.body = --server_count;
   }))
-  .use(route.post('/api/count/reset', function* () {
+  .use(route.post('/api/count/reset', ctx => {
     server_count = 0;
-    this.body = server_count;
+    ctx.body = server_count;
+  }))
+  .use(route.get('/favicon.ico', () => {
+    // ignore this request
   }))
 ;
 

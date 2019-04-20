@@ -1,12 +1,14 @@
 window.__CLIENT__ = true;
 window.__SERVER__ = false;
 
+require('@babel/polyfill');
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import create from '../shared/store';
-import * as reducers from '../shared/reducers';
+import reducers from '../shared/reducers';
 import CounterApp from '../shared/apps';
 
 const state = window.__initialState;
