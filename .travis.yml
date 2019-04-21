@@ -15,4 +15,4 @@ before_script:
   - yarn run start -- && sleep 1 &
 
 script:
-  - sleep 1 && yarn run cypress:run
+  - sleep 10 && yarn run cypress:run
