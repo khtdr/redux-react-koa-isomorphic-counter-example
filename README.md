@@ -4,6 +4,7 @@
 [![devDependency Status](https://david-dm.org/khtdr/redux-react-koa-isomorphic-counter-example/master/dev-status.svg)](https://david-dm.org/khtdr/redux-react-koa-isomorphic-counter-example/master#type=dev)
 
 #### updates
+  - Upgraded to the latest versions. - _May 30 2019_
   - Upgraded _everything_ to the latest versions. - _April 20 2019_
   - Updated to the latest __React 16__ and __Redux 4__ - _June 23 2018_
   - Added Cypress.io tests with Travis CI - _June 23 2018_
