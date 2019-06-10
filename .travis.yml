@@ -12,7 +12,7 @@ install:
   - yarn install && yarn run cypress:install
 
 before_script:
-  - yarn run start -- && sleep 1 &
+  - yarn run start -- && sleep 10 &
 
 script:
   - sleep 10 && yarn run cypress:run
