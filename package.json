@@ -11,7 +11,7 @@
     "prebuild": "make clean",
     "build": "NODE_ENV=production make -j5 build",
     "prestart": "yarn run build",
-    "start": "NODE_ENV=production node --harmony lib/server",
+    "start": "NODE_ENV=production node lib/server",
     "dev": "NODE_ENV=development make -j5 webpack-server dev-server watch"
   },
   "repository": {
@@ -51,7 +51,7 @@
     "react": "^16.4.1",
     "react-dom": "npm:@hot-loader/react-dom",
     "react-hot-loader": "^4.8.8",
-    "react-redux": "^7.0.3",
+    "react-redux": "^8.0.2",
     "redux": "^4.0.0"
   },
   "devDependencies": {
@@ -61,8 +61,8 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
-    "cypress": "^3.3.1",
-    "nodemon": "^1.19.1",
+    "cypress": "^10.4.0",
+    "nodemon": "^2.0.19",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.4.1"
