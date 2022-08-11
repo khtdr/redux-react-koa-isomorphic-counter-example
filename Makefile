@@ -18,6 +18,6 @@ public/js/app.js: $(SRC_JS); $(BIN)/webpack
 js: $(LIB_JS)
 $(LIB_JS): lib/%.js: src/%.js
 	mkdir -p $(dir $@)
-	$(BIN)/babel --cache --plugins=@babel/proposal-class-properties --presets=@babel/react,@babel/env $< -o $@
+	$(BIN)/babel --plugins=@babel/proposal-class-properties --presets=@babel/react,@babel/env $< -o $@
 
 .PHONY: all build clean dev dev-server js watch webpack webpack-server
